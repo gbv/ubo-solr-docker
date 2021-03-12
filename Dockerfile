@@ -1,6 +1,6 @@
 # Bind paths /var/solr/data
 FROM alpine/git as git
-ARG UBO_BRANCH=master
+ARG UBO_BRANCH=main
 RUN mkdir /opt/ubo
 WORKDIR /opt/
 RUN git --version && \
