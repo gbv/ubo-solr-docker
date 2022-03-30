@@ -1,17 +1,12 @@
 # Docker for Reposis
 This dockerfile creates a solr server with the mir-config sets installed. 
 
-## Environment Variables
-SOLR_HOME = /opt/mir-solr-data/
-
 ## Mount point 
--> see SOLR_HOME 
- 
-If you first mount a new directory you need to set the owner to 8983:8983
+/var/solr/data - the solr data
 
 ##Example Usage:
 ```
-sudo docker run -it -p 8983:8983 -v /home/paschty/solr-docker2:/opt/mir-solr-data/ -e SOLR_HOME=/opt/mir-solr-data/ vzgreposis/ubo-solr:latest
+sudo docker run -it -p 8983:8983 -v /home/paschty/solr-docker2:/var/solr/data vzgreposis/ubo-solr:latest
 ```
 
 ## build and deploy
